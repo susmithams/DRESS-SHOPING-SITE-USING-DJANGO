@@ -1,0 +1,35 @@
+#b{
+    background-color:#FFFACD;
+    height:80vh;
+    width:100%;
+    }
+   .navbar{
+   background-color:#FFFACD;
+   }
+   .navbar-brand h1{
+    color:#fad25a;
+    padding-left:-3px;
+
+   }
+   .head{
+   width:100%;
+   height:20vh;
+   background-color:#fad25a;
+
+   }
+       .row{
+    width:100%;
+    height:100vh;
+
+    }
+    .loginbox{
+    width:460px;
+    height:40vh;
+    background-color:#f5f5f0;
+    border-radius:40px;
+    padding:50px;
+    align:center;
+    margin-top:180px;
+
+    }
+

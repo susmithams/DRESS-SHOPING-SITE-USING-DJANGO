@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js" integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    body{background-image:url("{% static 'image/Screenshot 2024-04-19 121254.png' %}");}
+
+</style>
+<body>
+<div class="container-fluid">
+    <div class="row">
+
+
+
+        <div id=a1 class="col-3 p-5"align="center">
+            <h1 style="margin-top:100px;color:white;">Be the First to Know!</h1>
+            <h4 style="margin-top:30px;color:white;">Sign up now and be part of the ML Silks Family for our collection updates!</h4>
+                {% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+<h2 style="margin-top:80px;color:white;">Register Seller</h2>
+<form method="POST">{% csrf_token %}
+
+    <table>
+    {{form.as_table}}
+        </table>
+    <button type="submit" class="btn btn-info" style="margin-top:60px;width:100px;height:2rem;">Register</button>
+
+</form>
+<p class="mt-3"style="margin-top:20px;color:white;font-size:30px;">Already have an account? <a href="http://127.0.0.1:8000/sellerapp/login/" style="color:white;text-decoration:none;">Login here</a> </p>
+            </div></div>
+
+</body>
+</html>

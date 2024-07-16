@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">{% csrf_token %}
+    <input type="text" name="address_line1"placeholder="House no./Building Name"><br><br>
+    <input type="text" name="address_line2" placeholder="Road Name/Area/Colony"><br><br>
+    <input type="number" name="pincode" placeholder="Pincode"><br><br>
+    <input type="text" name="city" placeholder="City"><br><br>
+    <select name="state">
+        <option>state</option>
+        <option>Kerala</option>
+        <option>Tamil nadu</option>
+        <option>Karnataka</option>
+        <option>andra pradesh</option>
+        <option>Goa</option>
+    </select><br><br>
+    <hr>
+    <h3>Contact Details</h3>
+    <input type="text" name="contact_name" placeholder="Contact Name"><br><br>
+    <input type="number" name="contact_number" placeholder="Contact Number"><br><br>
+    <hr>
+    <input type="submit" value="Save Address and Continue">
+
+
+</form>
+
+</body>
+</html>

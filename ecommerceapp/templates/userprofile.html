@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+        <script type="text/javascript">
+            function filterItems(){
+            var input,filter,cards,i,title,txtValue;
+            input=document.getElementById("searchinput");
+            filter=input.value.toUpperCase();
+            cards=document.getElementsByClassName("card");
+            for(i=0;i<cards.length;i++){
+            title=cards[i].getElementsByClassName('card-title')[0];
+            txtValue=title.textContent || title.innerText;
+            if(txtValue.toUpperCase().indexOf(filter)>-1){
+                cards[i].style.display="";
+            }
+            else{
+            cards[i].style.display="none";
+            }
+          }
+        }
+
+        </script>
+
+     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" >
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js" integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js" integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<style>
+    h6,h4{
+     color:#2E2A2A;
+     padding-left:20px;
+    }
+    .navbar-text {
+    padding-right:50px;
+     color:#2E2A2A;
+
+    }
+    .navbar a{
+     color:#2E2A2A;
+     font-size:20px;
+    }
+
+   .container-fluid{
+    background-color:#EEEEEE;
+    height:500vh;
+   }
+    .card{
+       background-image:url("{% static 'image/img_15.png' %}");
+
+           box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+
+       }
+    .list-group-item{
+    background-image:url("{% static 'image/img_15.png' %}");
+    text-align:center;
+
+
+    }
+    a{text-decoration:none;
+    color:#2E2A2A;
+
+    }
+    i{color:#2E2A2A;
+    font-size:40px;
+    padding-left:100px;}
+    .navbar{
+   background-color: #EEEEEE;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+    }
+
+</style>
+<body>
+<div class="container-fluid">
+    <nav class="navbar">
+        <div>
+        <h4>𝑾𝒉𝒂𝒕 𝑨𝒓𝒆 𝒀𝒐𝒖 𝑺𝒉𝒐𝒑𝒑𝒊𝒏𝒈 𝑻𝒐𝒅𝒂𝒚?</h4>
+        <img src="{% static 'image/img_4.png' %}"style="height:70px;width:70px;border-radius:50%;margin-left:20px;">
+        <a href="?category=all" style="font-size:20px;color:#A52A2A;">𝑨𝒍𝒍</a>
+
+        <img src="{% static 'image/img_16.png' %}"style="height:70px;width:70px;border-radius:50%;margin-left:20px;">
+        <a href="?category=men" style="font-size:20px;color:#A52A2A;"> 𝑴𝒆𝒏</a>
+
+        <img src="{% static 'image/img_17.png' %}"style="height:70px;width:70px;border-radius:50%;margin-left:20px;">
+        <a href="?category=women" style="font-size:20px;color:#A52A2A;">𝑾𝒐𝒎𝒆𝒏</a>
+
+        <img src="{% static 'image/img_18.png' %}"style="height:70px;width:70px;border-radius:50%;margin-left:20px;">
+        <a href="?category=kids" style="font-size:20px;color:#A52A2A;">𝑲𝒊𝒅𝒔</a>
+        <a href="http://127.0.0.1:8000/ecommerceapp/wishlistdisplay/"><i class="fa-solid fa-heart"></i></a>
+            <a href="http://127.0.0.1:8000/ecommerceapp/cartdisplay/"> <i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="http://127.0.0.1:8000/ecommerceapp/order/"> <i class="fa-solid fa-box-open"></i></a>
+            <br><br>
+            <form class="d-flex">
+
+        <input id="searchinput" class="form-control me-2" type="text" placeholder="Search" aria-label="Search" onkeyup="filterItems()">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+
+      </form>
+
+
+        </div>
+    <span class="navbar-text">
+        <a style="color:#2E2A2A;">{{data.fullname}}</a> <img src="{{data.propic.url}}" height="50px" width="50px" style="border-radius:50%"><br>
+
+        <button type="button" class="btn"><a href="http://127.0.0.1:8000/ecommerceapp/updateprofile/{{data.id}}"style="color:#2E2A2A;" class="card-link">𝑽𝒊𝒆𝒘 𝑫𝒆𝒕𝒂𝒊𝒍</a></button>
+        <h6><a href="http://127.0.0.1:8000/ecommerceapp/password/" style="color:#2E2A2A;" class="card-link"> 𝑪𝒉𝒂𝒏𝒈𝒆 𝑷𝒂𝒔𝒔𝒘𝒐𝒓𝒅</a></h6>
+         <h6><a href="http://127.0.0.1:8000/ecommerceapp/logout/" style="color:#2E2A2A;" class="card-link">𝑳𝒐𝒈𝒐𝒖𝒕</a></h6>
+
+    </span>
+</nav>
+
+
+
+    <div class="row g-5"style="margin-top:50px;padding-left:50px;">
+        {% for i in db %}
+        <div class="col-3 g-4">
+        <div class="card" style="width: 18rem;">
+  <img src="{{i.productimage.url}}" class="card-img-top" style="height:30vh;" alt="...">
+  <div class="card-body">
+    <h5 align="center" class="card-title">{{i.product}}</h5>
+    <p class="card-text">{{i.desc}}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li align="center" class="list-group-item">{{i.price}}</li>
+    <li class="list-group-item">
+        <form method="get" action="http://127.0.0.1:8000/ecommerceapp/addtocart/{{i.id}}">
+        <select name="size" required>
+            <option>--select--</option>
+            {% for j in i.size %}
+                <option value="{{ j }}">{{ j }}</option>
+            {% endfor %}
+        </select>
+    </li>
+  </ul>
+  <div class="card-body">
+    <input type="submit" value="Add to cart"style="margin-left:10px;">
+       </form>
+   <a href="http://127.0.0.1:8000/ecommerceapp/wishlistproduct/{{i.id}}"> <input type="submit" value="Wishlist"style="margin-left:40px;width:100px;"></a>
+
+  </div>
+
+</div>
+        </div>
+
+
+            {% endfor %}
+                </div>
+
+
+
+
+
+
+</div>
+
+
+
+
+</body>
+</html>

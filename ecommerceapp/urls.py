@@ -1,0 +1,28 @@
+from django.urls import path
+from .views import *
+urlpatterns=[
+    path('userprofile/',userprofile),
+    path('updateprofile/<int:id>',updateprofile),
+ path('registration/',registration),
+    path('index/',index),
+    path('userlogin/',userlogin),
+    # path('sellerproductupload/',sellerproductupload),
+    path('addtocart/<int:itemid>',addtocart),
+    path('cartdisplay/',cartdisplay),
+    path('incdec/<int:cartid>',inc_dec),
+    path('removecart/<int:cartid>',removecart),
+    path('wishlistproduct/<int:itemid>',wishlistproduct),
+    path('wishlistdisplay/',wishlistdisplay),
+    path('removewishlist/<int:itemid>',removewishlist),
+    path('wishtoadd/<int:itemid>',wishtoadd),
+    path('address/',address),
+    path('deliverydetails/',delivery_details),
+    path('summary/',summary),
+    path('createorder/',createorder),
+    path('order/',ordereditems),
+    path('cancelorder/<int:orderid>',cancelorder),
+    path('password/',changepassword),
+    path('logout/',logout),
+    path('forgot/',forgotpass),
+    path('renew/<int:id>',renewpassword),
+]

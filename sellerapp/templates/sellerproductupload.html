@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" >
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" enctype="multipart/form-data">{% csrf_token %}
+    <select name="category" >
+        <option>--Select Category--</option>
+        <option value="men">Men</option>
+        <option value="women">Women</option>
+        <option value="kids">Kids</option>
+    </select><br><br>
+    <input type="file" name="productimage" ><br><br>
+    <input type="text" name="product" placeholder="Product Name"><br><br>
+    <input type="number" name="price" placeholder="Price"><br><br>
+
+    <input type="text" name="size" placeholder="Available Sizes"><br><br>
+    <textarea name="desc">Description</textarea><br><br>
+    <input type="submit" value="Upload Now">
+
+
+</form>
+
+
+</body>
+</html>

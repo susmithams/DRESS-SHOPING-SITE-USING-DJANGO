@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" enctype="multipart/form-data">{% csrf_token %}
+      <select name="category" >
+        <option>--Select Category--</option>
+        <option value="men" {% if data.category == 'men' %}selected {% endif %}>Men</option>
+        <option value="women" {% if data.category == 'women' %}selected {% endif %}>Women</option>
+        <option value="kids" {% if data.category == 'kids' %}selected {% endif %}>Kids</option>
+    </select><br><br>
+      <img src="{{data.productimage.url}}" style="width:60px;height:70px;">
+    <input type="file" name="productimage" value="{{data.productimage.url}}" ><br><br>
+    <input type="text" name="product" placeholder="Product Name" value="{{data.product}}"><br><br>
+    <input type="number" name="price" placeholder="Price" value="{{data.price}}"><br><br>
+    <input type="text" name="size" value="{{data.size}}"><br><br>
+
+    <textarea name="desc">{{data.desc}}</textarea><br><br>
+    <input type="submit" value="Update Now">
+
+
+</form>
+
+</body>
+</html>
