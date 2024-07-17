@@ -11,6 +11,8 @@ Customer:
 Customers can browse products, view product details, add items to their cart, and make purchases.
 Each customer will have an account to track their orders, manage their profile, and view purchase history.
 Ordered details and payment details are passed into user's personal mail 
+
+
 Seller:
 
 Sellers can manage their product listings, including adding new products, updating product information, and removing items.
