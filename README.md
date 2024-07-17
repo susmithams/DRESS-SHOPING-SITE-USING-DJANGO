@@ -1,7 +1,20 @@
 SHOPPING SITE
 
-This project deals with developing a Virtual website ‘E-commerce Website’. It provides the user with a list of the various products available for purchase in the store. For the convenience of online shopping, a shopping cart is provided to the user. After the selection of the goods, it is sent for the order confirmation process. The system is implemented using Python’s web framework Django
-It will display products, and customers can select catalogs and select products and can remove products from their cart specifying the quantity of each item. Selected items will be collected in a cart. At checkout, the item on the card will be presented as an order. Customers can pay for the items in the cart to complete an order. This project has a great future scope. The project also provides security with the use of login ID and passwords, so that no unauthorized users can access your account. The only authorized person who has the appropriate access authority can access the software.
+
+An e-commerce site is a platform that facilitates online transactions between buyers and sellers, enabling them to exchange goods and services over the internet. By leveraging Django, a powerful Python-based web framework, we can develop a robust and scalable e-commerce application that caters to both customers and sellers. This project will adopt a function-based approach, offering distinct functionalities for each user type through separate customer and seller applications.
+
+Overview
+The e-commerce site will consist of two primary roles:
+
+Customer:
+
+Customers can browse products, view product details, add items to their cart, and make purchases.
+Each customer will have an account to track their orders, manage their profile, and view purchase history.
+Ordered details and payment details are passed into user's personal mail 
+Seller:
+
+Sellers can manage their product listings, including adding new products, updating product information, and removing items.
+Sellers will have an account to track their sales, manage inventory, and view sales analytics.
 
 to see this go to the link
 
