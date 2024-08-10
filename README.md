@@ -20,4 +20,4 @@ Sellers will have an account to track their sales, manage inventory, and view sa
 
 to see this go to the link
 
-https://drive.google.com/file/d/1YExMcIi6s7JWeB1DivkvHmktcKi9EL1o/view?usp=sharing
+https://drive.google.com/file/d/1ot7MZz_RLEubmNt7msULieDTv4bmNJ8z/view?usp=sharing
